@@ -118,7 +118,7 @@
 
 <html>
 <head>
-	<title>This is my paper title</title>
+	<title>TransVisDrone</title>
 	<meta property="og:image" content="Path to my teaser.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
 	<meta property="og:title" content="Creative and Descriptive Paper Title." />
 	<meta property="og:description" content="Paper description." />
@@ -138,23 +138,28 @@
 <body>
 	<br>
 	<center>
-		<span style="font-size:36px">Creative and Descriptive Paper Title</span>
+		<span style="font-size:36px">TransVisDrone : Spatio temporal Transformers for drone to drone detection in aerial videos</span>
 		<table align=center width=600px>
 			<table align=center width=600px>
 				<tr>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">First Author</a></span>
+							<span style="font-size:24px"><a href="https://www.linkedin.com/in/tusharsangam/">Tushar Sangam</a></span>
 						</center>
 					</td>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Second Author</a></span>
+							<span style="font-size:24px"><a href="https://scholar.google.co.in/citations?user=fWu6sFgAAAAJ&hl=en">Ishan R. Dave</a></span>
 						</center>
 					</td>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Third Author</a></span>
+							<span style="font-size:24px"><a href="https://scholar.google.com/citations?user=SqcjV8EAAAAJ&hl=en">Waqas Sultani</a></span>
+						</center>
+					</td>
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:24px"><a href="https://scholar.google.com/citations?user=p8gsO3gAAAAJ&hl=en">Mubarak Shah</a></span>
 						</center>
 					</td>
 				</tr>
@@ -163,12 +168,12 @@
 				<tr>
 					<td align=center width=120px>
 						<center>
-							<span style="font-size:24px"><a href=''>[Paper]</a></span>
+							<span style="font-size:24px"><a href='https://arxiv.org/pdf/2210.08423.pdf'>[Paper]</a></span>
 						</center>
 					</td>
 					<td align=center width=120px>
 						<center>
-							<span style="font-size:24px"><a href='https://github.com/richzhang/webpage-template'>[GitHub]</a></span><br>
+							<span style="font-size:24px"><a href='https://github.com/tusharsangam/TransVisDrone'>[GitHub]</a></span><br>
 						</center>
 					</td>
 				</tr>
@@ -186,13 +191,13 @@
 				</td>
 			</tr>
 		</table>
-		<table align=center width=850px>
+		<!--<table align=center width=850px>
 			<tr>
 				<td>
 					This was a template originally made for <a href="http://richzhang.github.io/colorization/">Colorful Image Colorization</a>. The code can be found in this <a href="https://github.com/richzhang/webpage-template">repository</a>.
 				</td>
 			</tr>
-		</table>
+		</table>-->
 	</center>
 
 	<hr>
@@ -201,16 +206,24 @@
 		<center><h1>Abstract</h1></center>
 		<tr>
 			<td>
-				This is my abstract.
+				<p>Drone-to-drone detection using visual feed has crucial applications, such as detecting drone collisions, detecting drone attacks, or coordinating flight with other drones.
+However, existing methods are computationally costly, follow
+non-end-to-end optimization, and have complex multi-stage pipelines, making them less suitable for real-time deployment
+on edge devices. In this work, we propose a simple yet
+effective framework, TransVisDrone, that provides an end-to-end solution with higher computational efficiency. We utilize CSPDarkNet-53 network to learn object-related spatial features and VideoSwin model to improve drone detection
+in challenging scenarios by learning spatio-temporal dependencies of drone motion. Our method achieves state-of-the-art performance on three challenging real-world datasets
+(Average Precision@0.5IOU): NPS 0.95, FLDrones 0.75, and
+AOT 0.80, and a higher throughput than previous methods. We also demonstrate its deployment capability on edge
+devices and its usefulness in detecting drone-collision (encounter).</p>
 			</td>
 		</tr>
 	</table>
 	<br>
 
 	<hr>
-	<center><h1>Talk</h1></center>
+	<center><h1>Qualitative Visualizations</h1></center>
 	<p align="center">
-		<iframe width="660" height="395" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen align="center"></iframe>
+		<iframe width="660" height="395" src="https://www.youtube.com/watch?v=th9JweArgaw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen align="center"></iframe>
 	</p>
 
 	<table align=center width=800px>
@@ -224,7 +237,7 @@
 	</table>
 	<hr>
 
-	<center><h1>Code</h1></center>
+	<center><h1>Method Overview</h1></center>
 
 	<table align=center width=420px>
 		<center>
@@ -247,7 +260,19 @@
 		<center>
 			<tr>
 				<td>
-					Short description if wanted
+					<ul>
+					<li>Method works in online fashion</li>
+
+					<li>Sample clip from continuous drone footage </li>
+
+					<li>We then apply temporally consistent augmentations on clip </li>
+
+					<li>Extract individual features of each frame in clip</li>
+
+					<li>Apply efficient spatio-temporal attention using 3D SwinTransformer layers</li>
+
+					<li>Post processing using NMS to reduce false positives & low confident detections </li>
+					</ul>
 				</td>
 			</tr>
 		</center>
@@ -255,7 +280,7 @@
 	<table align=center width=800px>
 		<br>
 		<tr><center>
-			<span style="font-size:28px">&nbsp;<a href='https://github.com/richzhang/webpage-template'>[GitHub]</a>
+			<span style="font-size:28px">&nbsp;<a href='https://github.com/tusharsangam/TransVisDrone'>[GitHub]</a>
 			</center>
 		</span>
 	</table>
