@@ -1,6 +1,8 @@
-@inproceedings{author20XXtitle,
-  title={Please cite me},
-  author={Author, First and Author, Second and Author, Third},
-  booktitle={Conference},
-  year={20XX}
+@misc{sangam2022transvisdrone,
+      title={TransVisDrone: Spatio-Temporal Transformer for Vision-based Drone-to-Drone Detection in Aerial Videos}, 
+      author={Tushar Sangam and Ishan Rajendrakumar Dave and Waqas Sultani and Mubarak Shah},
+      year={2022},
+      eprint={2210.08423},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
 }

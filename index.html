@@ -1,6 +1,7 @@
 <script src="http://www.google.com/jsapi" type="text/javascript"></script> 
 <script type="text/javascript">google.load("jquery", "1.3.2");</script>
-
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+  <script src="image-slider-lightbox/dist/jquery-simple-lightbox.js"></script>
 <style type="text/css">
 	body {
 		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
@@ -222,11 +223,18 @@ devices and its usefulness in detecting drone-collision (encounter).</p>
 
 	<hr>
 	<center><h1>Qualitative Visualizations</h1></center>
-	<p align="center">
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/th9JweArgaw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-		<!--<iframe width="660" height="395" src="https://www.youtube.com/watch?v=th9JweArgaw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen align="center"></iframe>-->
-	</p>
-
+	<div id="makeslider">
+		<p align="center">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/th9JweArgaw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		</p>
+		<!-- <p align="center">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/th9JweArgaw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		</p> -->
+	</div>
+	
+	<!-- <script>
+		$('#makeslider').simpleLightbox();
+	</script> -->
 	<table align=center width=800px>
 		<br>
 		<tr>
@@ -291,10 +299,10 @@ devices and its usefulness in detecting drone-collision (encounter).</p>
 		<center><h1>Paper and Supplementary Material</h1></center>
 		<tr>
 			<td><a href=""><img class="layered-paper-big" style="height:175px" src="./resources/paper.png"/></a></td>
-			<td><span style="font-size:14pt">F. Author, S. Author, T. Author.<br>
-				<b>Creative and Descriptive Paper Title.</b><br>
-				In Conference, 20XX.<br>
-				(hosted on <a href="">ArXiv</a>)<br>
+			<td><span style="font-size:12pt">Tushar Sangam, Ishan Dave, Waqas Sultani, Mubarak Shah.<br>
+				<b>TransVisDrone: Spatio-Temporal Transformer for Vision-based Drone-to-Drone Detection in Aerial Videos</b><br>
+				In Conference ICRA, 2023, London.<br>
+				(hosted on <a href="https://arxiv.org/abs/2210.08423">ArXiv</a>)<br>
 				<!-- (<a href="./resources/camera-ready.pdf">camera ready</a>)<br> -->
 				<span style="font-size:4pt"><a href=""><br></a>
 				</span>
